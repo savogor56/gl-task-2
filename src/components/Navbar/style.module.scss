@@ -1,0 +1,12 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  h1 {
+    margin-bottom: 38px;
+  }
+  .cards {
+    display: flex;
+    width: 80%;
+    max-width: 960px;
+  }
+}

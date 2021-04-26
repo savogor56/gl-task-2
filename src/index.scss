@@ -1,0 +1,28 @@
+@import-normalize;
+
+$hColor: #2E3134;
+
+body {
+  margin: 0;
+  font-family: Roboto Condensed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  color: $hColor;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 37px;
+  color: $hColor;
+}
