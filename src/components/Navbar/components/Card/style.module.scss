@@ -1,0 +1,42 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 35px;
+  background: linear-gradient(180deg, #8CB928 0%, #45AE4D 100%);
+  border-radius: 18px;
+  width: 213px;
+  height: 213px;
+  box-shadow: 0 20px 40px #48AE4B;
+
+  .content {
+    display: flex;
+    width: 80%;
+    height: 20%;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 19px;
+  }
+
+  .cardImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .groupImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      margin: 7px;
+    }
+  }
+
+  p {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+  }
+}
