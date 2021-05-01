@@ -8,12 +8,8 @@
   border-radius: 18px;
   width: 213px;
   height: 213px;
-  box-shadow: 0 20px 40px #48AE4B;
+  box-shadow: 0 40px 50px -20px #48AE4B;
   cursor: pointer;
-
-  &:hover {
-    box-shadow: none;
-  }
 
   .content {
     display: flex;
