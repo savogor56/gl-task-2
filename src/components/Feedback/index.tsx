@@ -3,6 +3,7 @@ import cn from 'classnames'
 import {Input} from './components/Input'
 import {Button} from './components/Button'
 import {useForm} from 'react-hook-form'
+import {ReactComponent as Error} from './assets/err.svg'
 
 import s from './style.module.scss'
 
@@ -20,7 +21,7 @@ export const Feedback = () => {
     return (
         <div className={s.root}>
             <form onSubmit={handleSubmit(onSubmit)} className={cn(s.content, s.submitted )}>
-                { isSubmitSuccessful &&
+                { !isSubmitSuccessful &&
                     <>
                         <h2>Оставьте заявку, и мы позвоним вам в ближайшее время</h2>
                         <Input
@@ -31,14 +32,15 @@ export const Feedback = () => {
                                 pattern: /^(\+7)\s\d{3}\s\d{3}\s\d{2}\s\d{2}/
                             })}
                         />
+                        {errors.phone && <span className={s.error}> <Error /> Проверьте набранный номер</span>}
                     </>
                 }
-                {!isSubmitSuccessful &&
+                {isSubmitSuccessful &&
                     <h2>Спасибо, что оставили заявку. <br/>
                         Мы скоро вам перезвоним.</h2>
                 }
-                {errors.phone && "ERROR"}
-                <Button  isDisable />
+
+                <Button  isDisable={isSubmitSuccessful} />
             </form>
         </div>
     )

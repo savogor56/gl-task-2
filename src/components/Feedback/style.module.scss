@@ -5,7 +5,6 @@
   width: 51%;
   max-width: 872px;
   min-width: 365px;
-  height: 252px;
   margin-bottom: 124px;
   box-shadow: 0 20px 75px -10px #48AE4B;
   background: #ffffff;
@@ -14,13 +13,25 @@
   .content {
     height: 100%;
     margin: 0 auto;
-    max-width: 380px;
-    width: 65.7%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     text-align: center;
+
+    h2 {
+      width: 65.7%;
+    }
+
+    .error {
+      color: #363636;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      svg {
+        margin-right: 2px;
+      }
+    }
 
     &.submitted {
       justify-content: space-around;

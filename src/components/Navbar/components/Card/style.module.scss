@@ -4,12 +4,14 @@
   align-items: center;
   justify-content: flex-end;
   margin-right: 35px;
+  margin-bottom: 24px;
   background: linear-gradient(180deg, #8CB928 0%, #45AE4D 100%);
   border-radius: 18px;
   width: 213px;
   height: 213px;
   box-shadow: 0 40px 50px -20px #48AE4B;
   cursor: pointer;
+  user-select: none;
 
   .content {
     display: flex;
@@ -24,6 +26,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-end;
+    width: 100%;
   }
 
   .groupImg {
@@ -39,5 +43,48 @@
     margin: 0;
     text-align: center;
     color: #fff;
+  }
+
+  @media (max-width: 624px) {
+    width: 160px;
+    height: 160px;
+    //justify-content: space-around;
+    margin: 10px;
+
+    .content {
+      width: 90%;
+    }
+
+    .cardImg {
+      & > .cam svg {
+        width: 25px;
+        height: 55px;
+      }
+
+      & > .ras svg {
+        width: 81px;
+        height: 55px;
+      }
+
+      & > .btv svg {
+        width: 30px;
+        height: 24px;
+      }
+    }
+
+    .groupImg {
+      & > .cam svg {
+        width: 25px;
+        height: 56px;
+      }
+      & > .hundred svg {
+        width: 34px;
+        height: 34px;
+      }
+      & > .wifi svg {
+        width: 32px;
+        height: 24px;
+      }
+    }
   }
 }

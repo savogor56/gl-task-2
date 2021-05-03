@@ -1,13 +1,23 @@
 .root {
   background-image: url("./assets/bg.png");
+  background-size: cover;
+  background-position: center center;
   width: 960px;
   height: 408px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: 18px;
+
   .title {
     display: flex;
     width: 40%;
+    height: 38%;
+
+    svg {
+      height: 100%;
+    }
+
     h1 {
       padding-top: 10px;
     }
@@ -15,10 +25,30 @@
 
   .content {
     margin: 0 0 46px 46px;
-    width: 30%;
+    width: 40%;
+    font-family: Roboto;
     font-weight: bold;
     font-size: 20px;
     line-height: 23px;
     color: #2E3134;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    background-position: right center;
+  }
+
+  @media (max-width: 624px) {
+    background-image: url("./assets/bg-small.png");
+    width: 375px;
+    height: 208px;
+    h1 {
+      font-size: 20px;
+      line-height: 23px;
+    }
+    .content {
+      font-size: 12px;
+      line-height: 14px;
+    }
   }
 }

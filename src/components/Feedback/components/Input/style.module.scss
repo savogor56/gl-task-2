@@ -2,11 +2,10 @@
   display: flex;
   border: 3px solid #DAE0E5;
   border-radius: 4px;
-  //padding: 8px 25px;
-  //width: 50%;
   height: 60px;
   max-width: 315px;
   min-width: 240px;
+  margin-top: 33px;
 
   .input {
     outline: none;
@@ -28,7 +27,7 @@
   }
 
   &.active {
-    box-shadow: 0px 0px 24px rgba(0, 152, 16, 0.25), 0px 24px 24px rgba(0, 152, 16, 0.25);
+    box-shadow: 0 0 24px rgba(0, 152, 16, 0.25), 0 24px 24px rgba(0, 152, 16, 0.25);
     border: 3px solid #47B247;
   }
 

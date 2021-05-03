@@ -16,22 +16,42 @@ export const Card: React.FC<Props> = ({type, title, text}) => {
     return (
         <div className={s.root}>
             <div className={s.cardImg}>
-                {type === 'card1' && <Cam />}
-                {type === 'card2' && <Ras />}
+                {type === 'card1' &&
+                <div className={s.cam}>
+                    <Cam />
+                </div>}
+                {type === 'card2' &&
+                <div className={s.ras}>
+                    <Ras />
+                </div>}
                 {type === 'card3' &&
                 <div className={s.groupImg}>
-                    <Hundred />
-                    <Cam />
-                    <Wifi />
+                    <div className={s.hundred}>
+                        <Hundred />
+                    </div>
+                    <div className={s.cam}>
+                        <Cam />
+                    </div>
+                    <div className={s.wifi}>
+                        <Wifi />
+                    </div>
                 </div>
                 }
                 {type === 'card4' &&
                     <>
-                        <Btv />
+                        <div className={s.btv}>
+                            <Btv />
+                        </div>
                         <div className={s.groupImg}>
-                            <Hundred />
-                            <Cam />
-                            <Wifi />
+                            <div className={s.hundred}>
+                                <Hundred />
+                            </div>
+                            <div className={s.cam}>
+                                <Cam />
+                            </div>
+                            <div className={s.wifi}>
+                                <Wifi />
+                            </div>
                         </div>
                     </>
                 }

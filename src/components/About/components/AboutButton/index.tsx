@@ -1,13 +1,22 @@
 import cam from './assets/cam.png'
 import s from './style.module.scss'
 
-export const AboutButton = () => {
+interface Props {
+    modalOpen: (type: string) => void
+    type: string
+}
+
+export const AboutButton: React.FC<Props> = ({modalOpen, type}) => {
+    const handleClick = () => {
+        modalOpen(type)
+    }
+
     return (
         <div className={s.root}>
-            <div className={s.button}>
-                    <img src={cam} alt='camera' />
+            <div className={s.button} onClick={handleClick}>
+                <img src={cam} alt='camera' />
             </div>
-            <span>Подробнее</span>
+            <span onClick={handleClick}>Подробнее</span>
         </div>
     )
 }

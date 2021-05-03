@@ -17,6 +17,7 @@
     text-transform: uppercase;
     color: #747474;
     cursor: pointer;
+    user-select: none;
   }
   .button {
     display: flex;
@@ -37,6 +38,16 @@
       min-width: 50px;
       min-height: 130px;
       margin: auto;
+    }
+  }
+
+  @media (max-width: 624px) {
+    .button {
+      box-shadow: none;
+    }
+
+    span {
+      display: none;
     }
   }
 }

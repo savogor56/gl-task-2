@@ -4,4 +4,16 @@
   max-width: 870px;
   justify-content: space-between;
   margin: 103px auto;
+
+  @media (max-width: 624px) {
+    width: 55vw;
+  }
+
+  @media (max-width: 475px) {
+    width: 70vw;
+  }
+
+  @media (max-width: 370px) {
+    width: 85vw;
+  }
 }
